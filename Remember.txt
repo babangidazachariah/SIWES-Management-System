@@ -1,0 +1,19 @@
+change the following before uploading
+
+++database password {createDatabaseTable, connection}
+++server path for storing snapshot of the daily activity {siwesDailyReport}
+
+
+Configure Emails: https://easyengine.io/tutorials/linux/ubuntu-postfix-gmail-smtp/
+
+Change Writing Permissions of a file for reading, writing: http://linuxcommand.org/lc3_wss0010.php { chmod 755 FILEPATH }
+
+Save and Quit Terminal Editor:
+
+===> Press ESC Key
+===> Press :x!
+===> Press Enter
+
+Update/Deploy to App Engine
+
+appcfg.py -A <appName|ProjectName> update <localDirectory>

@@ -1,0 +1,167 @@
+application: siwes
+version: 1
+runtime: php55
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /ActivityGallery
+ # mime_type:"images/jpeg|images/jpg|images/png"
+  static_dir: ActivityGallery/
+
+- url: /images
+ # mime_type:"images/jpeg|images/jpg|images/png"\1  
+  static_dir: images/
+  
+- url: /industry
+  static_dir: industry/
+  
+- url: /institution
+  static_dir: institution/
+  
+- url: /itf
+  static_dir: itf/
+  
+- url: /js
+ # mime_type:"text/javascript"
+  static_dir: js/
+  
+- url: /MenuAssests
+  #mime_type:"text/css"
+  static_dir: MenuAssets/
+  
+- url: /SpryAssets
+  static_dir: SpryAssests/
+  
+- url: /student
+  static_dir: student/
+  
+- url: /UploadStudents
+  static_dir: UploadStudents/
+  #upload: /UploadStudents/(.*\.(csv|txt|xlxs))
+  
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
+
+- url: /.*
+  script: index.php
+
+- url: /index.php
+  script: index.php
+  
+- url: /siwesHome.php
+  script: siwesHome.php
+  login: required
+  auth_fail_action: redirect
+
+- url: /addNew.php
+  script: addNew.php
+  
+- url: /application.php
+  script: application.php
+  
+- url: /changePassword.php
+  script: changePassword.php
+  
+- url: /connection.php
+  script: connection.php
+  
+- url: /createDatabaseTable.php
+  script: createDatabaseTable.php
+  
+- url: /generalCss.css
+  script: generalCss.css
+  
+- url: /newjs.js
+  script: newjs.js
+  
+- url: /randomPassword.php
+  script: randomPassword.php
+  
+- url: /redirectPage.php
+  script: redirectPage.php
+  
+- url: /remember.txt
+  script: remember.txt
+  
+- url: /siwesApplication.php
+  script: siwesApplication.php
+  
+- url: /test.php
+  script: test.php
+  
+  
+- url: /test.html
+  script: test.html
+  
+  
+  
+  
+  
+  - url: /ActivityGallery
+  static_dir: ActivityGallery
+
+- url: /images
+  static_dir: images
+  
+- url: /industry
+  static_dir: industry
+  
+- url: /institution
+  static_dir: institution
+  
+- url: /itf
+  static_dir: itf
+  
+- url: /js
+  static_dir: js
+  
+- url: /MenuAssests
+  static_dir: MenuAssets
+  
+- url: /SpryAssets
+  static_dir: SpryAssests
+  
+
+- url: /student
+  static_dir: student
+  
+
+  - url: /institution/(.*\.(php|html|css|js))
+  #static_files: institution/\1
+  #upload: /institution/(.*\.(php|html|css|js))
+  script: \1
+  
+- url: /itf/(.*\.(php|html|css|js))
+  #static_files: itf/\1
+  #upload: /institution/(.*\.(php|html|css|js))
+  script: \1
+  
+- url: /student/(.*\.(php|html|css|js))
+  #static_files: student/\1
+  #upload: /institution/(.*\.(php|html|css|js))
+  script: \1
+  
+- url: /UploadStudents/(.*\.(csv|php|html|css|js))
+  #static_files: UploadStudents/\1
+  #upload: /institution/(.*\.(csv|csv|html|css|js))
+  script: \1
+  
+- url: /stylesheets/(.*\.(php|html|css|js))
+  #static_files: stylesheets/\1
+  #upload: /institution/(.*\.(php|html|css|js))
+  script: \1
+  
+- url: /js/(.*\.(php|html|css|js))
+  #static_files: js/\1
+  #upload: /js/(.*\.(php|html|css|js))
+  script: \1
+  
+- url: /SpryAssets/(.*\.(php|html|css|js))
+  script: \1
+
+- url: /MenuAssets/(.*\.(php|html|css|js))
+  script: \1
+    
